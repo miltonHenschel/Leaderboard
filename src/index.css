@@ -76,4 +76,6 @@ h2.form-header {
 input#input-name,
 input#input-score {
   font-size: 1.2rem;
+  font-weight: normal;
+  padding: 0.25rem;
 }
