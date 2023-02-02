@@ -6,7 +6,64 @@
     <title>Leaderboard</title>
   </head>
   <body>
-    <link rel="stylesheet" href="css" />
-    <script src="index.js"></script>
+    <main>
+      <h1 id="heading">Leaderboard</h1>
+      <section id="section-main">
+        <section id="section-left">
+          <form id="form-left">
+            <div class="form-left-div-header">
+              <h2 class="form-header">Recent scores</h2>
+              <button type="button" class="button">Refresh</button>
+            </div>
+            <div class="form-left-div-content">
+              <span class="form-span"
+                ><p id="name">Name1</p>
+                :&nbsp;
+                <p id="score">Score1</p></span
+              >
+              <span class="form-span"
+                ><p id="name">Name2</p>
+                :&nbsp;
+                <p id="score">Score2</p></span
+              >
+              <span class="form-span"
+                ><p id="name">Name3</p>
+                :&nbsp;
+                <p id="score">Score3</p></span
+              >
+              <span class="form-span"
+                ><p id="name">Name4</p>
+                :&nbsp;
+                <p id="score">Score4</p></span
+              >
+              <span class="form-span"
+                ><p id="name">Name5</p>
+                :&nbsp;
+                <p id="score">Score5</p></span
+              >
+            </div>
+          </form>
+        </section>
+        <section id="section-right">
+          <form id="form-right">
+            <h2 class="form-header">Add your score</h2>
+            <input
+              id="input-name"
+              class="form-input"
+              type="text"
+              placeholder="Your name"
+            />
+            <input
+              id="input-score"
+              class="form-input"
+              type="text"
+              placeholder="Your score"
+            />
+            <button type="button" class="button">Submit</button>
+          </form>
+        </section>
+      </section>
+    </main>
+    <script src="index.js" type="module"></script>
   </body>
 </html>
