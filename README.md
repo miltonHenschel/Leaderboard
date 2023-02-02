@@ -11,7 +11,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 To Do List App ](#-to-do-list-app-)
+- [📖 Leaderboard ](#about-project)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -33,9 +33,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 To Do List App <a name="about-project"></a>
+# 📖 Leaderboard <a name="about-project"></a>
 
-A tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.
+The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -67,17 +67,15 @@ A tool that helps to organize your day. It simply lists the things that you need
 
 ### Key Features <a name="key-features"></a>
 
-- **Adding a new item**
-- **Removing a selected item**
-- **Marking a selected item as complete**
-- **Removing all items marked as complete at once**
-- **Reordering a selected item (as drag-and-drop)**
+- **Basic page structure**
+- **Send and receive data from API**
+- **Final touches**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://miltonhenschel.github.io/ToDoList-App/)
+- [Live Demo Link](https://miltonhenschel.github.io/Leaderboard/dev)
 <!--  - [Video presentation](https://www.loom.com/share/)-->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -103,11 +101,11 @@ In order to run this project you need:
 - [ ] Clone this repository to your desired folder:
 
 ```
-git clone https://github.com/miltonHenschel/ToDoList-App.git
+git clone https://github.com/miltonHenschel/Leaderboard.git
 ```
 
 ```
-cd ToDoList-App
+cd Leaderboard
 ```
 
 - [ ] Open the file in your code editor
