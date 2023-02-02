@@ -75,7 +75,7 @@ The leaderboard website displays scores submitted by different players. It also 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://miltonhenschel.github.io/Leaderboard/dev)
+- [Live Demo Link](https://miltonhenschel.github.io/Leaderboard/dist/)
 <!--  - [Video presentation](https://www.loom.com/share/)-->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
