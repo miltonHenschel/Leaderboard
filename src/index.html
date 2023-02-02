@@ -6,7 +6,40 @@
     <title>Leaderboard</title>
   </head>
   <body>
-    <link rel="stylesheet" href="css" />
-    <script src="index.js"></script>
+    <main>
+      <h1 id="heading">Leaderboard</h1>
+      <section id="section-main">
+        <section id="section-left">
+          <form id="form-left">
+            <div class="form-left-div-header">
+              <h2 class="form-header">Recent scores</h2>
+              <button type="button" class="button">Refresh</button>
+            </div>
+            <div class="form-left-div-content"></div>
+          </form>
+        </section>
+        <section id="section-right">
+          <form id="form-right">
+            <h2 class="form-header">Add your score</h2>
+            <input
+              id="input-name"
+              class="form-input"
+              type="text"
+              placeholder="Your name"
+              required
+            />
+            <input
+              id="input-score"
+              class="form-input"
+              type="text"
+              placeholder="Your score"
+              required
+            />
+            <button class="button">Submit</button>
+          </form>
+        </section>
+      </section>
+    </main>
+    <script src="index.js" type="module"></script>
   </body>
 </html>
