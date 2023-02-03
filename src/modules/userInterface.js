@@ -1,26 +1,12 @@
-import LocalStorage from './localStorage.js';
+class UI {
+  static showScore() {}
 
-class UserInterface {
-  static showScore() {
-    const scores = LocalStorage.getScore();
-    scores.forEach((item) => UserInterface.addScore(item));
-  }
+  static addScore() {}
 
-  static addScore(item) {
-    const formLeft = document.querySelector('.form-left-div-content');
-    formLeft.innerHTML += `
-      <span class="form-span">
-        <p id="name">${item.name}</p>
-        :&nbsp;
-        <p id="score">${item.score}</p>
-      </span>
-      `;
-  }
-
-  static clearFields() {
+  static clearField() {
     const formRight = document.querySelector('#form-right');
     formRight.reset();
   }
 }
 
-export default UserInterface;
+export default UI;

@@ -1,8 +1,8 @@
-class LeaderBoard {
+class Game {
   constructor(name, score) {
     this.name = name;
     this.score = score;
   }
 }
 
-export default LeaderBoard;
+export default Game;
