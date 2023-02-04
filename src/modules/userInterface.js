@@ -1,26 +1,26 @@
-import LocalStorage from './localStorage.js';
+import { getGame } from './api.js';
 
-class UserInterface {
-  static showScore() {
-    const scores = LocalStorage.getScore();
-    scores.forEach((item) => UserInterface.addScore(item));
-  }
+export const clearFields = () => {
+  const form = document.querySelector('#form-right');
+  form.reset();
+};
 
-  static addScore(item) {
-    const formLeft = document.querySelector('.form-left-div-content');
-    formLeft.innerHTML += `
+const showGame = (game) => {
+  const gameForm = document.querySelector('.form-left-div-content');
+  gameForm.innerHTML += `
       <span class="form-span">
-        <p id="name">${item.name}</p>
+        <p id="name">${game.user}</p>
         :&nbsp;
-        <p id="score">${item.score}</p>
+        <p id="score">${game.score}</p>
       </span>
       `;
-  }
+};
 
-  static clearFields() {
-    const formRight = document.querySelector('#form-right');
-    formRight.reset();
-  }
-}
-
-export default UserInterface;
+export const refreshGame = async () => {
+  const gameForm = document.querySelector('.form-left-div-content');
+  gameForm.innerHTML = '';
+  const games = await getGame();
+  games.forEach((game) => {
+    showGame(game);
+  });
+};

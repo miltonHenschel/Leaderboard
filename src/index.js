@@ -1,25 +1,24 @@
 import './index.css';
-import LeaderBoard from './modules/leaderBoard.js';
-import UserInterface from './modules/userInterface.js';
-import LocalStorage from './modules/localStorage.js';
+import { postGame } from './modules/api.js';
+import { clearFields, refreshGame } from './modules/userInterface.js';
 
-// DISPLAY SCORES AND NAMES
-document.addEventListener('DOMContentLoaded', () => {
-  UserInterface.showScore();
+const refreshButton = document.getElementById('refresh');
+refreshButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  refreshGame();
 });
 
-// ADD SCORE AND NAME
-const formRight = document.querySelector('#form-right');
-formRight.addEventListener('submit', (e) => {
+const submitButton = document.getElementById('form-right');
+submitButton.addEventListener('submit', async (e) => {
   e.preventDefault();
-
   const inputName = document.querySelector('#input-name');
   const newName = inputName.value;
   const inputScore = document.querySelector('#input-score');
   const newScore = inputScore.value;
-
-  const newLeaderBoard = new LeaderBoard(newName, newScore);
-  UserInterface.addScore(newLeaderBoard);
-  LocalStorage.addScore(newLeaderBoard);
-  UserInterface.clearFields();
+  await postGame(newName, newScore);
+  clearFields();
 });
+
+window.onload = () => {
+  refreshGame();
+};
