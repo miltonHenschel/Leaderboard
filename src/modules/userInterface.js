@@ -1,12 +1,26 @@
-class UI {
-  static showScore() {}
+import { getGame } from './api.js';
 
-  static addScore() {}
+export const clearFields = () => {
+  const form = document.querySelector('#form-right');
+  form.reset();
+};
 
-  static clearField() {
-    const formRight = document.querySelector('#form-right');
-    formRight.reset();
-  }
-}
+const showGame = (game) => {
+  const gameForm = document.querySelector('.form-left-div-content');
+  gameForm.innerHTML += `
+      <span class="form-span">
+        <p id="name">${game.user}</p>
+        :&nbsp;
+        <p id="score">${game.score}</p>
+      </span>
+      `;
+};
 
-export default UI;
+export const refreshGame = async () => {
+  const gameForm = document.querySelector('.form-left-div-content');
+  gameForm.innerHTML = '';
+  const games = await getGame();
+  games.forEach((game) => {
+    showGame(game);
+  });
+};
