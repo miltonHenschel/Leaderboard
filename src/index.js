@@ -16,7 +16,6 @@ submitButton.addEventListener('submit', async (e) => {
   const inputScore = document.querySelector('#input-score');
   const newScore = inputScore.value;
   await postGame(newName, newScore);
-  refreshGame();
   clearFields();
 });
 
